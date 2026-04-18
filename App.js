@@ -26,12 +26,12 @@ const enviarNotificacion = async () => {
   });
 };
 
-// 👇 recibe el valor como parámetro
+
 const enviarContador = async (valor) => {
   await Notifications.scheduleNotificationAsync({
     content: {
       title: "El contador incrementó",
-      body: `El contador está en: ${valor}`, // 👈 template string correcto
+      body: `El contador está en: ${valor}`, 
     },
     trigger: null,
   });
@@ -52,7 +52,7 @@ export default function App() {
   const incrementar = () => {
     const nuevoValor = contador + 1;
     setContador(nuevoValor);
-    enviarContador(nuevoValor); // 👈 se llama con paréntesis y pasa el valor
+    enviarContador(nuevoValor); 
   };
 
   const guardarContador = async (valor) => {
